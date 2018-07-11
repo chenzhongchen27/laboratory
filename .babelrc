@@ -1,0 +1,29 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "@utils": "./src/utils",
+        "@s-service": "./src/server/service"
+      },
+      "extensions": [".js", ".json"]
+    }]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "babel-plugin-empower-assert",
+        "babel-plugin-espower"
+      ]
+    },
+    "sourceMap": true,
+    "retainLines": true
+  },
+  "sourceMap": true
+}
